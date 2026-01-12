@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball League</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FFE5B4; /* soft basketball court color */
+        }
+
+        .container {
+            background: #fff3e6;
+            border-radius: 15px;
+            padding: 40px 30px;
+            width: 400px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            color: #FF6F00; /* basketball orange */
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        a {
+            display: inline-block;
+            padding: 12px 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 10px;
+            background: linear-gradient(45deg, #FF6F00, #FFB74D); /* orange gradient */
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        a:hover {
+            background: linear-gradient(45deg, #FFB74D, #FF6F00);
+            transform: translateY(-2px);
+        }
+
+        @media(max-width: 450px) {
+            .container {
+                width: 90%;
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Basketball League Registration</h1>
+        <p>Join our basketball league today! Register now to secure your spot and stay updated with games, teams, and events.</p>
+        <a href="create_account.html">Register Now</a>
+    </div>
+</body>
+</html>
