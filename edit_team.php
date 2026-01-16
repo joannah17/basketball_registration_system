@@ -146,7 +146,7 @@ button:hover {
     <button type="submit" name="update">Update Team</button>
 </form>
 
-<a class="back" href="view_teams.php">← Back to Teams List</a>
+<a class="back" href="view_teams.php">Back to Teams List</a>
 </div>
 
 <?php $conn->close(); ?>

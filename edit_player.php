@@ -149,7 +149,7 @@ button:hover {
     <button type="submit" name="update">Update Player</button>
 </form>
 
-<a class="back" href="view_players.php">← Back to Players List</a>
+<a class="back" href="view_players.php">Back to Players List</a>
 </div>
 
 <?php $conn->close(); ?>
