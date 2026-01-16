@@ -1,0 +1,113 @@
+SQL OF CREATE ACCOUNT 
+-- Use your database
+USE account_db;
+
+-- Drop old table if exists (optional)
+DROP TABLE IF EXISTS players;
+-- Create new table for Basketball League with category
+CREATE TABLE players (
+    id INT AUTO_INCREMENT PRIMARY KEY,   -- 1
+    player_name VARCHAR(100),            -- 2
+    team_name VARCHAR(50),               -- 3
+    email VARCHAR(100),                  -- 4
+    password VARCHAR(50),                -- 5
+    age INT,                             -- 6
+    category VARCHAR(50)                 -- 7
+);
+
+-- Insert 10 sample rows
+INSERT INTO players (player_name, team_name, email, password, age, category) VALUES
+('John Doe', 'Tigers', 'john@example.com', '1234', 25, 'Senior'),
+('Jane Smith', 'Lions', 'jane@example.com', '1234', 30, 'Senior'),
+('Alice Brown', 'Eagles', 'alice@example.com', '1234', 28, 'Professional'),
+('Bob White', 'Hawks', 'bob@example.com', '1234', 35, 'Professional'),
+('Charlie Black', 'Sharks', 'charlie@example.com', '1234', 40, 'Senior'),
+('Diana Green', 'Panthers', 'diana@example.com', '1234', 22, 'Junior'),
+('Evan Gray', 'Wolves', 'evan@example.com', '1234', 27, 'Senior'),
+('Fiona Blue', 'Bulls', 'fiona@example.com', '1234', 32, 'Professional'),
+('George Red', 'Dragons', 'george@example.com', '1234', 29, 'Senior'),
+('Hannah Yellow', 'Falcons', 'hannah@example.com', '1234', 31, 'Professional');
+
+OR AMO JA SA SQL MN KA CREATE_ACCOUNT
+-- Use your database
+USE account_db;
+
+-- Drop old table if exists (optional)
+DROP TABLE IF EXISTS players;
+-- Create new table for Basketball League with category
+CREATE TABLE players (
+    id INT AUTO_INCREMENT PRIMARY KEY,   -- 1
+    player_name VARCHAR(100),            -- 2
+    team_name VARCHAR(50),               -- 3
+    email VARCHAR(100),                  -- 4
+    password VARCHAR(50),                -- 5
+    age INT,                             -- 6
+    category VARCHAR(50)                 -- 7
+);
+-- Insert 10 sample rows (categories updated)
+INSERT INTO players (player_name, team_name, email, password, age, category) VALUES
+('John Doe', 'Tigers', 'john@example.com', '1234', 17, 'UNDER 19'),
+('Jane Smith', 'Lions', 'jane@example.com', '1234', 18, 'UNDER 19'),
+('Alice Brown', 'Eagles', 'alice@example.com', '1234', 19, 'UNDER 19'),
+('Bob White', 'Hawks', 'bob@example.com', '1234', 20, 'UNDER 30'),
+('Charlie Black', 'Sharks', 'charlie@example.com', '1234', 22, 'UNDER 30'),
+('Diana Green', 'Panthers', 'diana@example.com', '1234', 16, 'UNDER 19'),
+('Evan Gray', 'Wolves', 'evan@example.com', '1234', 24, 'UNDER 30'),
+('Fiona Blue', 'Bulls', 'fiona@example.com', '1234', 23, 'UNDER 30'),
+('George Red', 'Dragons', 'george@example.com', '1234', 18, 'UNDER 19'),
+('Hannah Yellow', 'Falcons', 'hannah@example.com', '1234', 21, 'UNDER 30');
+SQL OF TEAMS 
+CREATE TABLE teams_data (
+    team_id INT AUTO_INCREMENT PRIMARY KEY,
+    sex VARCHAR(20),
+    coach_name VARCHAR(100),
+    home_city VARCHAR(100),
+    founded_year INT,
+    team_rank INT,
+    league_level VARCHAR(50)
+);
+
+INSERT INTO teams_data (sex, coach_name, home_city, founded_year, team_rank, league_level) VALUES
+('Male', 'Coach Ramos', 'Manila', 2005, 1, 'A'),
+('Male', 'Coach Dela Cruz', 'Cebu', 2010, 3, 'B'),
+('Male', 'Coach Villanueva', 'Davao', 2012, 2, 'A'),
+('Male', 'Coach Santos', 'Bacolod', 2008, 4, 'C'),
+('Male', 'Coach Hernandez', 'Iloilo', 2015, 6, 'B'),
+('Male', 'Coach Gomez', 'Quezon City', 2013, 5, 'A'),
+('Male', 'Coach Perez', 'Baguio', 2011, 9, 'C'),
+('Male', 'Coach Rivera', 'Taguig', 2018, 7, 'B'),
+('Male', 'Coach Flores', 'Cavite', 2014, 8, 'A'),
+('Male', 'Coach Mendoza', 'Pasig', 2007, 10, 'C');
+
+
+
+
+
+
+
+SQL OF GAMES 
+CREATE TABLE game_schedule (
+    schedule_id INT AUTO_INCREMENT PRIMARY KEY,
+    match_date DATE,
+    match_time TIME,
+    venue VARCHAR(100),
+    team_one VARCHAR(100),
+    team_two VARCHAR(100),
+    status VARCHAR(50)
+);
+
+INSERT INTO game_schedule (match_date, match_time, venue, team_one, team_two, status) VALUES
+('2025-01-10', '15:00', 'Manila Arena', 'Falcon Warriors', 'Street Kings', 'Scheduled'),
+('2025-01-12', '18:00', 'Cebu Dome', 'Sky Shooters', 'Golden Tigers', 'Scheduled'),
+('2025-01-14', '17:30', 'Davao Coliseum', 'Night Wolves', 'Royal Knights', 'Scheduled'),
+('2025-01-16', '16:00', 'Iloilo Stadium', 'Red Dragons', 'Blue Spartans', 'Scheduled'),
+('2025-01-18', '19:00', 'Quezon Arena', 'Iron Bulls', 'Thunder Hawks', 'Scheduled'),
+('2025-01-20', '15:45', 'Bacolod Gym', 'Sky Shooters', 'Street Kings', 'Scheduled'),
+('2025-01-22', '20:00', 'Cavite Court', 'Falcon Warriors', 'Royal Knights', 'Scheduled'),
+('2025-01-24', '14:00', 'Pasig Court', 'Blue Spartans', 'Iron Bulls', 'Scheduled'),
+('2025-01-26', '17:00', 'Taguig Center', 'Red Dragons', 'Night Wolves', 'Scheduled'),
+('2025-01-28', '18:30', 'Baguio Sports Hall', 'Golden Tigers', 'Thunder Hawks', 'Scheduled');
+
+SQL OF USERS
+CREATE TABLE users 
+( id INT AUTO_INCREMENT PRIMARY KEY, fullname VARCHAR(100), email VARCHAR(100), password VARCHAR(100) ); INSERT INTO users (fullname, email, password) VALUES ('Juan Dela Cruz', 'juan@gmail.com', '123456'), ('Maria Santos', 'maria@gmail.com', 'password'), ('Jose Rizal', 'jose@gmail.com', 'jose123'), ('Ana Reyes', 'ana@gmail.com', 'ana123'), ('Mark Villanueva', 'mark@gmail.com', 'markpass'), ('Liza Cruz', 'liza@gmail.com', 'liza2024'), ('Paolo Garcia', 'paolo@gmail.com', 'paolo123'), ('Kim Navarro', 'kim@gmail.com', 'kimpass'), ('John Aquino', 'john@gmail.com', 'john123'), ('Sarah Mendoza', 'sarah@gmail.com', 'sarahpass');
