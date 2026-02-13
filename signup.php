@@ -14,7 +14,7 @@ if (isset($_POST['signup'])) {
     $conn->query("INSERT INTO users (fullname, email, password)
                   VALUES ('$fullname', '$email', '$password')");
 
-    header("Location: create_account.html");
+    header("Location: login.php");
     exit;
 }
 ?>

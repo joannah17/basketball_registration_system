@@ -14,7 +14,7 @@ if (isset($_POST['login'])) {
 
     if ($result->num_rows == 1) {
         $_SESSION['email'] = $email;
-        header("Location: signup.php");
+        header("Location: create_account.html");
         exit;
     } else {
         $error = "Invalid email or password!";
@@ -134,7 +134,7 @@ button:hover {
     <?php if (isset($error)) echo "<div class='error'>$error</div>"; ?>
 
     <form method="POST">
-        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="email" placeholder="Email Address" required>
         <input type="password" name="password" placeholder="Password" required>
         <button name="login">Login</button>
     </form>
